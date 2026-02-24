@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Социальная сеть | Моя лента</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-users"></i>
+                <span>SocialNet</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active"><i class="fas fa-home"></i> Главная</a>
+                <a href="#"><i class="fas fa-user"></i> Профиль</a>
+                <a href="#"><i class="fas fa-bell"></i> Уведомления</a>
+            </div>
+            <div class="user-menu">
+                <img src="https://via.placeholder.com/40" alt="avatar" class="avatar">
+                <span>Гость</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <!-- Левый сайдбар -->
+            <aside class="sidebar-left">
+                <div class="profile-card">
+                    <div class="profile-cover"></div>
+                    <div class="profile-info">
+                        <img src="https://via.placeholder.com/80" alt="profile" class="profile-avatar">
+                        <h3>Гость</h3>
+                        <p>@guest_user</p>
+                        <button class="btn-edit-profile">Редактировать профиль</button>
+                    </div>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-value">0</span>
+                            <span class="stat-label">Посты</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">0</span>
+                            <span class="stat-label">Друзья</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">0</span>
+                            <span class="stat-label">Подписчики</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <ul class="menu-list">
+                        <li><i class="fas fa-newspaper"></i> Новости</li>
+                        <li><i class="fas fa-comment-dots"></i> Сообщения</li>
+                        <li><i class="fas fa-users"></i> Друзья</li>
+                        <li><i class="fas fa-image"></i> Фотографии</li>
+                        <li><i class="fas fa-calendar"></i> События</li>
+                        <li><i class="fas fa-cog"></i> Настройки</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Основной контент -->
+            <main class="main-content">
+                <div class="create-post">
+                    <div class="create-post-header">
+                        <img src="https://via.placeholder.com/50" alt="avatar" class="small-avatar">
+                        <input type="text" id="postInput" placeholder="Что у вас нового?" class="post-input">
+                    </div>
+                    <div class="create-post-actions">
+                        <button class="action-btn"><i class="fas fa-image"></i> Фото</button>
+                        <button class="action-btn"><i class="fas fa-video"></i> Видео</button>
+                        <button class="action-btn"><i class="fas fa-smile"></i> Чувства</button>
+                        <button class="btn-primary" id="publishBtn">Опубликовать</button>
+                    </div>
+                </div>
+
+                <div class="posts-feed" id="postsFeed">
+                    <!-- Посты будут загружаться сюда -->
+                </div>
+            </main>
+
+            <!-- Правый сайдбар -->
+            <aside class="sidebar-right">
+                <div class="suggestions-card">
+                    <h3>Возможные друзья</h3>
+                    <div class="suggestion-item">
+                        <img src="https://via.placeholder.com/40" alt="user">
+                        <div class="suggestion-info">
+                            <span class="suggestion-name">Анна Петрова</span>
+                            <span class="suggestion-mutual">5 общих друзей</span>
+                        </div>
+                        <button class="btn-add"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="suggestion-item">
+                        <img src="https://via.placeholder.com/40" alt="user">
+                        <div class="suggestion-info">
+                            <span class="suggestion-name">Иван Сидоров</span>
+                            <span class="suggestion-mutual">3 общих друга</span>
+                        </div>
+                        <button class="btn-add"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="trends-card">
+                    <h3>Актуальные темы</h3>
+                    <div class="trend-item">
+                        <span class="trend-tag">#технологии</span>
+                        <span class="trend-count">2,345 постов</span>
+                    </div>
+                    <div class="trend-item">
+                        <span class="trend-tag">#путешествия</span>
+                        <span class="trend-count">1,234 поста</span>
+                    </div>
+                    <div class="trend-item">
+                        <span class="trend-tag">#музыка</span>
+                        <span class="trend-count">987 постов</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
